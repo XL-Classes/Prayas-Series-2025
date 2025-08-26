@@ -1,0 +1,288 @@
+/* Navbar Brand Hover */
+.custom-navbar .navbar-brand {
+    transition: color 0.3s ease-in-out;
+}
+
+.custom-navbar .navbar-brand:hover {
+    color: #ffd700 !important;
+    /* Golden hover */
+}
+
+/* Nav Links */
+.custom-navbar .nav-link {
+    position: relative;
+    margin: 0 6px;
+    color: #f8f9fa !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ffd700 !important;
+}
+
+/* Underline Animation */
+.custom-navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #ffd700;
+    transition: width 0.3s ease-in-out;
+}
+
+.custom-navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.dropdown-item {
+    transition: background 0.3s, transform 0.2s;
+}
+
+.dropdown-item:hover {
+    background: #f1f1f1;
+    transform: translateX(5px);
+}
+
+/* Fade Animation for Dropdown */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* ✅ Dropdown Menu Custom Styling */
+.custom-navbar .dropdown-menu {
+    background: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 0;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+    animation: dropdownFade 0.3s ease-in-out;
+    min-width: 180px;
+}
+
+/* Dropdown Items */
+.custom-navbar .dropdown-item {
+    font-weight: 500;
+    padding: 10px 16px;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    color: #212529;
+}
+
+.custom-navbar .dropdown-item:hover {
+    background: #f8f9fa;
+    color: #0d6efd;
+    /* Bootstrap primary */
+    transform: translateX(6px);
+}
+
+/* Small icon spacing */
+.custom-navbar .dropdown-item::before {
+    content: "» ";
+    color: #0d6efd;
+    font-weight: bold;
+    margin-right: 2px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.custom-navbar .dropdown-item:hover::before {
+    opacity: 1;
+    transform: translateX(-3px);
+}
+
+/* Animation for dropdown */
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Footer Styling */
+footer {
+    position: relative;
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    /* Blue → Purple */
+    color: #fff;
+    overflow: hidden;
+    z-index: 1;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.05),
+            transparent 70%);
+    animation: footerGlow 10s linear infinite;
+    z-index: 0;
+    /* 👈 background hi rahe, links ko block na kare */
+}
+
+footer .container {
+    position: relative;
+    z-index: 2;
+    /* 👈 links aur content upar aa jayenge */
+}
+
+/* Copyright text */
+footer p {
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Quick Links */
+footer a {
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffc107 !important;
+    /* Golden highlight */
+    transform: translateY(-2px);
+}
+
+/* Social Icons */
+footer .bi {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .bi:hover {
+    color: #ffc107;
+    transform: scale(1.2) rotate(8deg);
+}
+
+/* Animation effect */
+@keyframes footerGlow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 🌟 Common Styling (Hero + CTA) */
+.hero-section,
+.cta-section {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-section::before,
+.cta-section::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, #0d6efd, #6610f2, #56a8c3, #735ff7);
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+    z-index: 0;
+}
+
+.hero-section .container,
+.cta-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Headings */
+.hero-section h1,
+.cta-section h3 {
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4);
+    animation: fadeInDown 1.2s ease;
+}
+
+/* Paragraphs */
+.hero-section p,
+.cta-section p {
+    opacity: 0.9;
+    animation: fadeInUp 1.5s ease;
+}
+
+/* Buttons */
+.hero-section .btn,
+.cta-section .btn {
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.hero-section .btn:hover,
+.cta-section .btn:hover {
+    background: #ffc107;
+    color: #000 !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔥 Gradient Animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Fade Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
