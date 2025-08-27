@@ -17,41 +17,49 @@
 }
 
 
+/*  */
 /* Navbar Links Styling */
 .navbar-nav .nav-link {
-  position: relative;
-  font-weight: 600;
-  color: #222; /* Default text color */
-  text-decoration: none;
-  padding: 8px 15px;
-  transition: color 0.3s ease;
+    position: relative;
+    display: inline-block;
+    /* ✅ ensures underline matches text width */
+    font-weight: 600;
+    color: #222;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: color 0.3s ease;
+    font-size: 1rem;
 }
 
 /* Hover text color */
 .navbar-nav .nav-link:hover {
-  color: #111; /* Darker shade */
+    color: #111;
 }
 
 /* Luxury Underline Effect */
 .navbar-nav .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 4px;
-  transform: translateX(-50%) scaleX(0);
-  transform-origin: center;
-  width: 80%;
-  height: 3px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, #c29d59, #f1d18a, #c29d59); /* Gold gradient */
-  transition: transform 0.35s ease-in-out;
+    content: "";
+    position: absolute;
+    left: 0;
+    /* ✅ start from left of text */
+    bottom: 0;
+    /* ✅ stick underline just below text */
+    width: 100%;
+    /* ✅ underline = text width */
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: center;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #c29d59, #f1d18a, #c29d59);
+    transition: transform 0.35s ease-in-out;
 }
 
 /* Show underline on hover */
 .navbar-nav .nav-link:hover::after {
-  transform: translateX(-50%) scaleX(1);
+    transform: scaleX(1);
 }
 
+/*  */
 
 
 /* Dropdown Styling */
