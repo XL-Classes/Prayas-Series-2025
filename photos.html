@@ -75,7 +75,7 @@
     <!-- 📸 Photo Gallery Section -->
     <section class="container my-5">
         <h2 class="text-center mb-4 fw-bold">📸 Our Memories</h2>
-        <div class="row g-3">
+        <div class="row g-3" id="photoGallery">
 
             <!-- Photo Items (1 - 13) -->
             <div class="col-6 col-md-4 col-lg-3">
@@ -103,7 +103,7 @@
                     data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal(this)">
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-                <img src="./assets/galleryPhotos/6-2.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Photo 6"
+                <img src="./assets/galleryPhotos/6-2.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Photo 6i"
                     data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal(this)">
             </div>
             <div class="col-6 col-md-4 col-lg-3">
@@ -135,19 +135,22 @@
                     data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal(this)">
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-                <img src="./assets/galleryPhotos/14.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Photo 13"
+                <img src="./assets/galleryPhotos/14.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Photo 14"
                     data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal(this)">
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-                <img src="./assets/galleryPhotos/15.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Photo 13"
+                <img src="./assets/galleryPhotos/15.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Photo 15"
                     data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal(this)">
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-                <img src="./assets/galleryPhotos/16.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Photo 13"
+                <img src="./assets/galleryPhotos/16.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Photo 16"
                     data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal(this)">
             </div>
-
         </div>
+        <!-- Pagination Buttons -->
+        <nav>
+            <ul class="pagination justify-content-center mt-4" id="pagination"></ul>
+        </nav>
     </section>
 
     <!-- 🖼 Bootstrap Modal -->
@@ -218,9 +221,69 @@
             document.getElementById("modalImage").src = imgElement.src;
         }
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const itemsPerPage = 12;
+            const gallery = document.querySelectorAll("#photoGallery .col-6");
+            const totalItems = gallery.length;
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+            const pagination = document.getElementById("pagination");
+            let currentPage = 1;
+
+            function showPage(page) {
+                gallery.forEach((item, index) => {
+                    item.style.display =
+                        index >= (page - 1) * itemsPerPage && index < page * itemsPerPage
+                            ? "block"
+                            : "none";
+                });
+
+                // Active button update
+                document.querySelectorAll("#pagination .page-item").forEach((btn) => {
+                    btn.classList.remove("active");
+                });
+                const btns = pagination.querySelectorAll(".page-item");
+                if (btns[page]) btns[page].classList.add("active");
+
+                // Prev/Next disable handling
+                btns[0].classList.toggle("disabled", page === 1);
+                btns[totalPages + 1].classList.toggle("disabled", page === totalPages);
+            }
+
+            // Pagination buttons create
+            pagination.innerHTML = `
+      <li class="page-item"><a class="page-link" href="#">«</a></li>
+    `;
+            for (let i = 1; i <= totalPages; i++) {
+                pagination.innerHTML += `
+        <li class="page-item"><a class="page-link" href="#">${i}</a></li>
+      `;
+            }
+            pagination.innerHTML += `
+      <li class="page-item"><a class="page-link" href="#">»</a></li>
+    `;
+
+            // Buttons events
+            const buttons = pagination.querySelectorAll(".page-item");
+            buttons.forEach((btn, index) => {
+                btn.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    if (btn.classList.contains("disabled")) return;
+
+                    if (btn.textContent === "«") currentPage = Math.max(1, currentPage - 1);
+                    else if (btn.textContent === "»") currentPage = Math.min(totalPages, currentPage + 1);
+                    else currentPage = parseInt(btn.textContent);
+
+                    showPage(currentPage);
+                });
+            });
+
+            // First render
+            showPage(currentPage);
+        });
+    </script>
+
 </body>
 
-
 </html>
-
-
