@@ -312,3 +312,7 @@ footer .bi:hover {
         transform: translateY(0);
     }
 }
+
+.text-muted{
+    margin-top: 1.5rem;
+}
