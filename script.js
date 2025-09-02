@@ -73,7 +73,7 @@ const resultsData = {
             name: "Manisha Meena",
             marks: {
                 Mathematics: 15 + " / 50",
-                Science : "Absent",
+                Science : 6 + " / 50",
             },
             
             teacherMessage1: "Manisha, abhi base strong karne par dhyaan do. Dheere-dheere tumhari performance khud improve ho jaayegi.",
@@ -163,7 +163,7 @@ const resultsData = {
             name: "Subhan Ali",
             marks: {
                 Mathematics: 39 + " / 50",
-                Science: 38 + " / 50",
+                Science: 41 + " / 50",
             },
             
             teacherMessage1: "Subhan, tumne 50 me se 39 marks laakar third rank hasil ki hai 👏. Yeh ek strong performance hai, bas thoda aur regular practice karoge toh tum aur upar jaa sakte ho. Apne effort ko aise hi banaye rakho, improvement pakka hoga.",
@@ -183,7 +183,7 @@ const resultsData = {
             name: "Tanuja Soni",
             marks: {
                 Mathematics: "Absent",
-                Science: "Absent",
+                Science: 10 + " / 50",
             },
             
             teacherMessage1: "Is test me aap  absent the. Yaad rakho, har test ek mauka hai apni progress samajhne ka. Regular rehna hi success ki key hai — agli baar koi bhi test miss na ho.",
