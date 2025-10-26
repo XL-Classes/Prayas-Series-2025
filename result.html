@@ -16,20 +16,21 @@
       border: 2px solid #ffc107;
       border-radius: 10px;
       padding: 10px 0;
-      font-size: 20px;
+      font-size: 18px;
+      /* mobile friendly */
       font-weight: bold;
       color: #ff0000;
-      position: relative;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      height: 50px;
+      position: relative;
     }
 
     .result-marquee p {
       display: inline-block;
       white-space: nowrap;
-      position: absolute;
-      will-change: transform;
-      animation: marquee 15s linear infinite;
+      position: relative;
+      /* relative for smooth start */
+      animation: marquee 12s linear infinite;
+      margin: 0;
     }
 
     .result-marquee a {
@@ -95,8 +96,9 @@
   </nav>
 
 
-  <div class="result-marquee py-2">
-    <p>
+  <!-- Premium Result Alert -->
+  <div class="result-marquee">
+    <p id="marqueeText">
       📢 <strong>XL Coaching Sambhav 01 Mathematics Test Result</strong> 📢 —
       📌 Result declare hoga aaj raat <strong>8:00 PM sharp</strong>! 🌐
       <a href="https://xl-classes.github.io/results.nic.in/" target="_blank">Click to see result</a> —
