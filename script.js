@@ -4,9 +4,9 @@ const resultsData = {
             name: "Aarti Kumawat",
             marks: {
                 Mathematics: {
-                    Theory: "61 / 80",
-                    Practical: "19 / 20",
-                    Total: "80 / 100"
+                    Theory: "68 / 80",
+                    Practical: "20 / 20",
+                    Total: "88 / 100"
                 }
             },
         },
@@ -36,7 +36,7 @@ const resultsData = {
                 Mathematics: {
                     Theory: "40 / 80",
                     Practical: "19 / 20",
-                    Total: "76 / 100"
+                    Total: "59 / 100"
                 }
             },
         },
@@ -46,7 +46,7 @@ const resultsData = {
                 Mathematics: {
                     Theory: "28 / 80",
                     Practical: "20 / 20",
-                    Total: "87 / 100"
+                    Total: "48 / 100"
                 }
             },
         },
@@ -56,7 +56,7 @@ const resultsData = {
                 Mathematics: {
                     Theory: "73 / 80",
                     Practical: "20 / 20",
-                    Total: "87 / 100"
+                    Total: "93 / 100"
                 }
             },
         },
@@ -911,5 +911,6 @@ function getResult() {
 document.getElementById("downloadBtn").addEventListener("click", () => {
     alert("Feature coming soon: Download checked copy as PDF/Img");
 });
+
 
 
