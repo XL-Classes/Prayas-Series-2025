@@ -1,4 +1,388 @@
 const resultsData = {
+    "Sambhav 2 - 2025": {
+        20232501: {
+            name: "Aarti Kumawat",
+            marks: {
+                Mathematics: {
+                    Theory: "61 / 80",
+                    Practical: "19 / 20",
+                    Total: "80 / 100"
+                }
+            },
+        },
+        20232502: {
+            name: "Antima Rathore",
+            marks: {
+                Mathematics: {
+                    Theory: "62 / 80",
+                    Practical: "20 / 20",
+                    Total: "82 / 100"
+                }
+            },
+        },
+        20232503: {
+            name: "Babita Sankhala",
+            marks: {
+                Mathematics: {
+                    Theory: "26 / 80",
+                    Practical: "18 / 20",
+                    Total: "44 / 100"
+                }
+            },
+        },
+        20232504: {
+            name: "Bhavya Kumawat",
+            marks: {
+                Mathematics: {
+                    Theory: "40 / 80",
+                    Practical: "19 / 20",
+                    Total: "76 / 100"
+                }
+            },
+        },
+        20232505: {
+            name: "Divyanshu Saini",
+            marks: {
+                Mathematics: {
+                    Theory: "28 / 80",
+                    Practical: "20 / 20",
+                    Total: "87 / 100"
+                }
+            },
+        },
+        20232506: {
+            name: "Kanishka Garhwal",
+            marks: {
+                Mathematics: {
+                    Theory: "73 / 80",
+                    Practical: "20 / 20",
+                    Total: "87 / 100"
+                }
+            },
+        },
+        20232507: {
+            name: "Krishna Kumawat",
+            marks: {
+                Mathematics: {
+                    Theory: "Absent",
+                    Practical: "Absent",
+                    Total: "Absent"
+                }
+            },
+        },
+        20232508: {
+            name: "Lokesh Swami",
+            marks: {
+                Mathematics: {
+                    Theory: "28 / 80",
+                    Practical: "18 / 20",
+                    Total: "46 / 100"
+                }
+            },
+        },
+        20232509: {
+            name: "Manisha Meena",
+            marks: {
+                Mathematics: {
+                    Theory: "20 / 80",
+                    Practical: "19 / 20",
+                    Total: "39 / 100"
+                }
+            },
+        },
+        20232510: {
+            name: "Priyanshu Kumawat",
+            marks: {
+                Mathematics: {
+                    Theory: "31 / 80",
+                    Practical: "19 / 20",
+                    Total: "50 / 100"
+                }
+            },
+        },
+        20232511: {
+            name: "Rishiraj Dixit",
+            marks: {
+                Mathematics: {
+                    Theory: "35 / 80",
+                    Practical: "19 / 20",
+                    Total: "54 / 100"
+                }
+            },
+        },
+        20232512: {
+            name: "Roshan Kumawat",
+            marks: {
+                Mathematics: {
+                    Theory: "26 / 80",
+                    Practical: "18 / 20",
+                    Total: "44 / 100"
+                }
+            },
+        },
+        20232513: {
+            name: "Saksham Kumawat",
+            marks: {
+                Mathematics: {
+                    Theory: "42 / 80",
+                    Practical: "19 / 20",
+                    Total: "61 / 100"
+                }
+            },
+        },
+        20232514: {
+            name: "Sarthak Bansal",
+            marks: {
+                Mathematics: {
+                    Theory: "71 / 80",
+                    Practical: "20 / 20",
+                    Total: "91 / 100"
+                }
+            },
+        },
+        20232515: {
+            name: "Simran Gajraj",
+            marks: {
+                Mathematics: {
+                    Theory: "70 / 80",
+                    Practical: "20 / 20",
+                    Total: "90 / 100"
+                }
+            },
+        },
+        20232516: {
+            name: "Simran Verma",
+            marks: {
+                Mathematics: {
+                    Theory: "34 / 80",
+                    Practical: "19 / 20",
+                    Total: "53 / 100"
+                }
+            },
+        },
+        20232517: {
+            name: "Subhan Ali",
+            marks: {
+                Mathematics: {
+                    Theory: "47 / 80",
+                    Practical: "19 / 20",
+                    Total: "66 / 100"
+                }
+            },
+        },
+        20232518: {
+            name: "Tanishka Mishra",
+            marks: {
+                Mathematics: {
+                    Theory: "55 / 80",
+                    Practical: "20 / 20",
+                    Total: "75 / 100"
+                }
+            },
+        },
+        20232519: {
+            name: "Tanuja Soni",
+            marks: {
+                Mathematics: {
+                    Theory: "28 / 80",
+                    Practical: "19 / 20",
+                    Total: "47 / 100"
+                }
+            },
+        },
+    },
+    "Sambhav 1 - 2025": {
+        20232501: {
+            name: "Aarti Kumawat",
+            marks: {
+                Mathematics: {
+                    Theory: "61 / 80",
+                    Practical: "19 / 20",
+                    Total: "80 / 100"
+                }
+            },
+        },
+        20232502: {
+            name: "Antima Rathore",
+            marks: {
+                Mathematics: {
+                    Theory: "61 / 80",
+                    Practical: "20 / 20",
+                    Total: "81 / 100"
+                }
+            },
+        },
+        20232503: {
+            name: "Babita Sankhala",
+            marks: {
+                Mathematics: {
+                    Theory: "19 / 80",
+                    Practical: "17 / 20",
+                    Total: "36 / 100"
+                }
+            },
+        },
+        20232504: {
+            name: "Bhavya Kumawat",
+            marks: {
+                Mathematics: {
+                    Theory: "57 / 80",
+                    Practical: "19 / 20",
+                    Total: "76 / 100"
+                }
+            },
+        },
+        20232505: {
+            name: "Kanishka Garhwal",
+            marks: {
+                Mathematics: {
+                    Theory: "67 / 80",
+                    Practical: "20 / 20",
+                    Total: "87 / 100"
+                }
+            },
+        },
+        20232506: {
+            name: "Krishna Kumawat",
+            marks: {
+                Mathematics: {
+                    Theory: "23 / 80",
+                    Practical: "17 / 20",
+                    Total: "40 / 100"
+                }
+            },
+        },
+        20232507: {
+            name: "Lokesh Swami",
+            marks: {
+                Mathematics: {
+                    Theory: "Absent",
+                    Practical: "Absent",
+                    Total: "Absent"
+                }
+            },
+        },
+        20232508: {
+            name: "Manish Meena",
+            marks: {
+                Mathematics: {
+                    Theory: "20 / 80",
+                    Practical: "18 / 20",
+                    Total: "38 / 100"
+                }
+            },
+        },
+        20232509: {
+            name: "Priyanshu Kumawat",
+            marks: {
+                Mathematics: {
+                    Theory: "33 / 80",
+                    Practical: "19 / 20",
+                    Total: "52 / 100"
+                }
+            },
+        },
+        20232510: {
+            name: "Rishiraj",
+            marks: {
+                Mathematics: {
+                    Theory: "Absent",
+                    Practical: "Absent",
+                    Total: "Absent"
+                }
+            },
+        },
+        20232511: {
+            name: "Roshan Kumawat",
+            marks: {
+                Mathematics: {
+                    Theory: "23 / 80",
+                    Practical: "18 / 20",
+                    Total: "41 / 100"
+                }
+            },
+        },
+        20232512: {
+            name: "Saksham Kumawat",
+            marks: {
+                Mathematics: {
+                    Theory: "49 / 80",
+                    Practical: "18 / 20",
+                    Total: "67 / 100"
+                }
+            },
+        },
+        20232513: {
+            name: "Sarthak Bansal",
+            marks: {
+                Mathematics: {
+                    Theory: "66 / 80",
+                    Practical: "19 / 20",
+                    Total: "85 / 100"
+                }
+            },
+        },
+        20232514: {
+            name: "Simran Gajraj",
+            marks: {
+                Mathematics: {
+                    Theory: "73 / 80",
+                    Practical: "20 / 20",
+                    Total: "93 / 100"
+                }
+            },
+        },
+        20232515: {
+            name: "Simran Verma",
+            marks: {
+                Mathematics: {
+                    Theory: "36 / 80",
+                    Practical: "20 / 20",
+                    Total: "56 / 100"
+                }
+            },
+        },
+        20232516: {
+            name: "Subhan Ali",
+            marks: {
+                Mathematics: {
+                    Theory: "62 / 80",
+                    Practical: "19 / 20",
+                    Total: "81 / 100"
+                }
+            },
+        },
+        20232517: {
+            name: "Tanishka Mishra",
+            marks: {
+                Mathematics: {
+                    Theory: "55 / 80",
+                    Practical: "19 / 20",
+                    Total: "74 / 100"
+                }
+            },
+        },
+        20232518: {
+            name: "Tanuja Soni",
+            marks: {
+                Mathematics: {
+                    Theory: "24 / 80",
+                    Practical: "19 / 20",
+                    Total: "43 / 100"
+                }
+            },
+        },
+        20232519: {
+            name: "Vansh Kumawat",
+            marks: {
+                Mathematics: {
+                    Theory: "38 / 80",
+                    Practical: "20 / 20",
+                    Total: "58 / 100"
+                }
+            },
+        },
+    },
     "Sambhav 1 - 2025": {
         20232501: {
             name: "Aarti Kumawat",
@@ -527,4 +911,5 @@ function getResult() {
 document.getElementById("downloadBtn").addEventListener("click", () => {
     alert("Feature coming soon: Download checked copy as PDF/Img");
 });
+
 
