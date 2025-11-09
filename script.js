@@ -394,6 +394,16 @@ const resultsData = {
                 }
             },
         },
+        20232520: {
+            name: "Vansh Kumawat",
+            marks: {
+                Mathematics: {
+                    Theory: "Absent",
+                    Practical: "Absent",
+                    Total: "Absent"
+                }
+            },
+        },
         20232502: {
             name: "Antima Rathore",
             marks: {
@@ -911,6 +921,7 @@ function getResult() {
 document.getElementById("downloadBtn").addEventListener("click", () => {
     alert("Feature coming soon: Download checked copy as PDF/Img");
 });
+
 
 
 
